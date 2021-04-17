@@ -1,0 +1,171 @@
+object Form1: TForm1
+  Left = 344
+  Height = 659
+  Top = 181
+  Width = 1008
+  Caption = 'Form1'
+  ClientHeight = 659
+  ClientWidth = 1008
+  LCLVersion = '2.0.12.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 659
+    Top = 0
+    Width = 105
+    Align = alLeft
+    ClientHeight = 659
+    ClientWidth = 105
+    TabOrder = 0
+    object RgTipoPessoa: TRadioGroup
+      Left = 1
+      Height = 153
+      Top = 1
+      Width = 103
+      Align = alTop
+      AutoFill = True
+      Caption = 'Tipo de pessoa'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 133
+      ClientWidth = 99
+      Items.Strings = (
+        'Cliente'
+        'Funcionário'
+        'Fornecedor'
+      )
+      OnClick = RgTipoPessoaClick
+      TabOrder = 0
+    end
+  end
+  object Panel2: TPanel
+    Left = 105
+    Height = 659
+    Top = 0
+    Width = 903
+    Align = alClient
+    ClientHeight = 659
+    ClientWidth = 903
+    TabOrder = 1
+    object PnGeral: TPanel
+      Left = 1
+      Height = 104
+      Top = 1
+      Width = 901
+      Align = alTop
+      ClientHeight = 104
+      ClientWidth = 901
+      TabOrder = 0
+      object EDCodigo: TLabeledEdit
+        Left = 56
+        Height = 23
+        Top = 24
+        Width = 121
+        EditLabel.Height = 15
+        EditLabel.Width = 121
+        EditLabel.Caption = 'Código'
+        EditLabel.ParentColor = False
+        TabOrder = 0
+      end
+      object EdNome: TLabeledEdit
+        Left = 56
+        Height = 23
+        Top = 72
+        Width = 233
+        EditLabel.Height = 15
+        EditLabel.Width = 233
+        EditLabel.Caption = 'Nome'
+        EditLabel.ParentColor = False
+        TabOrder = 1
+      end
+    end
+    object PnCliente: TPanel
+      Left = 1
+      Height = 56
+      Top = 105
+      Width = 901
+      Align = alTop
+      ClientHeight = 56
+      ClientWidth = 901
+      TabOrder = 1
+      Visible = False
+      object EdCredito: TLabeledEdit
+        Left = 168
+        Height = 23
+        Top = 19
+        Width = 121
+        EditLabel.Height = 15
+        EditLabel.Width = 121
+        EditLabel.Caption = 'Crédito'
+        EditLabel.ParentColor = False
+        Enabled = False
+        TabOrder = 0
+      end
+      object CkAtivarCredito: TCheckBox
+        Left = 56
+        Height = 19
+        Top = 23
+        Width = 93
+        Caption = 'Ativar Crédito'
+        TabOrder = 1
+      end
+    end
+    object PnFuncionario: TPanel
+      Left = 1
+      Height = 56
+      Top = 161
+      Width = 901
+      Align = alTop
+      ClientHeight = 56
+      ClientWidth = 901
+      TabOrder = 2
+      Visible = False
+      object EDPis: TLabeledEdit
+        Left = 55
+        Height = 23
+        Top = 22
+        Width = 121
+        EditLabel.Height = 15
+        EditLabel.Width = 121
+        EditLabel.Caption = 'PIS'
+        EditLabel.ParentColor = False
+        TabOrder = 0
+      end
+    end
+    object PnFornecedor: TPanel
+      Left = 1
+      Height = 56
+      Top = 217
+      Width = 901
+      Align = alTop
+      ClientHeight = 56
+      ClientWidth = 901
+      TabOrder = 3
+      Visible = False
+      object LabeledEdit1: TLabeledEdit
+        Left = 55
+        Height = 23
+        Top = 19
+        Width = 121
+        EditLabel.Height = 15
+        EditLabel.Width = 121
+        EditLabel.Caption = 'CNPJ'
+        EditLabel.ParentColor = False
+        TabOrder = 0
+      end
+    end
+    object BtnPreencherClasse: TToggleBox
+      Left = 727
+      Height = 44
+      Top = 284
+      Width = 107
+      Caption = 'Preencher Classe'
+      OnChange = BtnPreencherClasseChange
+      TabOrder = 4
+    end
+  end
+end
